@@ -1,0 +1,49 @@
+# Reading files: Functions related to files
+# open(), read()
+
+import os
+#print(os.listdir("C:\\Users\\kanishk\\Desktop\"))
+print(os.getcwd()) # Returns the directory from where the code is being run (current working directory)
+print(os.chdir("C:\\Users\\kanishk\\Desktop")) # Change the present working directory
+#file1 = open("test.txt","r")
+#print(file1.read()) # Loads the entire file in one go, not a great option of the file is too large and you're trying to loop through it.
+# print(file1.read(20)) # This will read only 5 characters
+# print(file1.readlines(50)) #Loads the no. of line that comprises of 50 first characters
+#print(file1.tell()) # Tells the character on which the cursor is
+#print(file1.readlines(50))
+#print(file1.seek(6,0)) # The second argument takes just 3 args: 0 (start of ile), 1(current pos),2 (end of file) [index from 1 andnot 0)
+#print(file1.read()) #This will print from the 4th element onwards
+#file1.close()
+'''
+file2 = open("writes.txt","w")
+file2.write("This demonstrates the write function")
+file2.close()
+file3 = open("writes.txt","r")
+print(file3.read())
+'''
+'''
+file4 = open("writes.txt","a")
+file4.write("\n I just appended a line here\n")
+file4.close()
+file5 = open("writes.txt","r")
+print(file5.read())
+'''
+'''
+f = open("writes.txt","a+")
+f.write(" Access modifier 'a+' lets you append and read, at once")
+f.seek(0,0)
+print(f.read())
+'''
+
+# Copy Files
+# Accept a file name from the user
+varP = str(input("Enter your file name "))
+varF = varP+".txt" # adding extension
+file1 = open(varF,"r")
+file2 = open("copied_file.txt","w")
+file2.write(file1.read()) # Contents copied to the new file
+file1.close()
+file2.close()
+
+
+
