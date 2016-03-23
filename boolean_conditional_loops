@@ -1,0 +1,160 @@
+# Getting boolean o/p = False
+print(3>5)
+print(5>=6)
+print(7==7)
+print(6!=9)
+
+# Nested Else-If
+
+varG = input("Select your Sex: 'M' of 'F'")
+varA = input ("Enter your Age")
+
+if varG == 'M':
+    if varA < 18:
+        print("You're an adolescent Male")
+    else:
+        print("You're an Adult Male")
+else:
+    if varA < 18:
+        print("You're an Adolescent Female")
+    else:
+        print("You're an Adult Female")
+
+# elif
+
+varD = {1:"Sunday",2:"Monday",3:"Tuesday",4:"Wednesday",5:"Thursday",6:"Friday",7:"Saturday"}
+print(varD)
+print("Select the number of the day")
+varS = input(varD)
+
+if varS == 1:
+    print("You selected Sunday")
+elif varS == 2:
+    print("You selected Monday")
+elif varS == 3:
+    print("You selected Tuesday")
+elif varS == 4:
+    print("You selected Wednesday")
+elif varS == 5:
+    print("You selected Thursday")
+elif varS == 6:
+    print("You selected Friday")
+elif varS == 7:
+    print("You selected Saturday")
+else:
+    print("You entered the wrong choice")
+
+# Logical Operators: And / Or
+
+varG = input("Select your Sex: 'M' of 'F'")
+varA = input ("Enter your Age")
+
+if varG == 'M' and varA < 18:
+    print("You're an adolescent Male")
+elif varG == 'M' and  varA > 18:
+    print("You're an Adult Male")
+
+elif varG == 'F' and varA < 18:
+    print("You're an Adolescent Female")
+elif varG =='F' and varA > 18:
+    print("You're an Adult Female")
+else:
+    print("Wrong choice selected")
+
+
+# Simple for loop
+
+for i in range(0,5):
+    print(i)
+
+# for loop with increment: the final argument denotes that it increments by 2
+for i in range(0,51,2):
+    print(i) # This will print only even number from 0 till 50
+
+# Print in reverse
+for i in range(50,0,-2):
+    print(i) # It won't include 0. It will only print till 2.
+
+# While Loops
+i = 0
+
+while i < 10:
+    print(i)
+    i = i+1
+
+# Nested for loops
+
+from __future__ import print_function #This is used to print in same line when the python version is below 3.0
+for i in range(1,5):
+    for j in range(0,i):
+        print ("*", end = "\t")
+        i = i +1
+    print("")
+
+# Prime number generator
+
+ for i in range(2,31):
+     j = 2
+     counter = 0
+     while j < i:
+         if i%j ==0:
+             counter = 1
+             j = j+1
+         else:
+             j = j+1
+     if counter == 0:
+         print(str(i) + " is a prime number")
+     else:
+         counter = 0
+
+# Control Statements : Pass, Break, Continue
+# Break statement
+
+counter = 0
+
+while counter < 10:
+    if counter == 4:
+        break
+    print(counter) # It will print till 3 only.
+    counter = counter+1
+
+# Pass - It's a filler code, it does nothing. It can just be used to fill syntax
+counter = 0
+
+while counter < 10:
+    if counter == 4:
+        break
+    else:
+        pass
+    print(counter) # It will print till 3 only.
+    counter = counter+1
+
+# Continue: If a code is present but you want to skip it and continue with the other
+
+for i in "kanishk":
+    if i == 'h':
+        continue
+    print(i) # It will print: kanisk : skips out 'h'
+
+# Another example of Continue
+
+for i in range(0,5):
+    if i < 2:
+        continue
+    print(i) # Will print 2,3,4 only
+
+# Try and Except: It's equal to try and catch in Java
+
+try:
+    if counter == 3:
+        print("The counter is ODD")
+except:
+    print("maybe the counter variable was not initialized")
+
+# Practice: Moonweight
+
+weight = 60.0
+for i in range(0,11):
+            moonweight = weight / 6
+            print(moonweight)
+            weight = weight + 1
