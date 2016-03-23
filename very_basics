@@ -1,0 +1,132 @@
+# print("ksha calls from here")
+
+varS = "Hey %s %s You're invited to my %d BirthDay"
+print(varS)
+# print (varS % ("Kanishk", "Sharan"))
+
+print(varS % ("Kanishk", "Sharan", 26))
+
+# Arrays/Lists
+
+varArr = ["Kanishk", "Saurabh", "Meenakshi", "Aditi", "Aayush"]
+
+for i in varArr:
+     print(i, 'is' ,len(i), ' characters long !')
+
+# List Functions
+# 'del' function
+
+del varArr[3]
+print(varArr)
+
+# Adding arrays is like concatenating strings and the 'len' function
+varArr = ["Kanishk", "Saurabh", "Meenakshi", "Aditi", "Aayush"]
+varIndex = [1, 2, 3, 4, 5]
+varResult = varArr + varIndex
+print(varResult)
+print(len(varResult))
+
+# append function, it takes one argument and appends only at he the very end
+varArr = ["Kanishk", "Saurabh", "Meenakshi", "Aditi", "Aayush"]
+varArr.append("Sujit")
+print(varArr)
+
+# insert function, it takes 2 arguments and can insert string at any given index
+varArr = ["Kanishk", "Saurabh", "Meenakshi", "Aditi", "Aayush"]
+varArr.insert(1, "Apoorv")
+print(varArr)
+
+# max, min functions
+
+varN = [1, 2, 3, 4, 5, 6, 78, 99, 776, 54, 43]
+varN1 = ["K","A","N","I","S","H","K"]
+print(max(varN1), min(varN1))
+
+# count function, counts the occurrence of certain element within an array
+
+varN.append(2)
+print(varN.count(2))
+
+# Dictionary, these are key:value combinations, they are case sensitive, use curly braces
+# Dictionaries are unordered values, there is no indexing in them
+
+varD = {"Land": 1, "Water": 2, "Ocean": 3, "Desert": 4}
+print varD["Land"]  # while referencing your dictionary use square brackets
+print varD
+
+# del function in dictionary
+
+del varD["Desert"]
+print varD
+
+# updating dictionary -- Notice that update can be used as append also if the key is unique.
+
+varD["Land"] = 12
+print varD
+varD1 = {"Land": 1, "Water": 2, "Ocean": 3, "Desert": 4}
+varD1["desert"] = 10
+print(varD1)
+
+# Basic functions used in dictionaries
+
+varD2 = {1:"Steve",2:"Homer",3:"Wozniacki",4:"Satya",5:"Nadella"}
+
+print varD2
+
+# clear function, deletes all the contents of a dictionary -- o/p = none
+varD = {"Land": 1, "Water": 2, "Ocean": 3, "Desert": 4}
+print (varD.clear())
+
+# delete a specific entry from the dictionary
+varD2 = {1:"Steve",2:"Homer",3:"Wozniacki",4:"Satya",5:"Nadella"}
+del varD2[4]
+print varD2
+
+del varD2 # This will delete the entire varD, now if you try to print it, it will give an error.
+print varD2
+
+# Find the keys of a dictionary
+varD2 = {1:"Steve",2:"Homer",3:"Wozniacki",4:"Satya",5:"Nadella"}
+print (varD2.keys())
+
+# Find the values in a dictionary
+print (varD2.values())
+
+# len function in dictionary
+print(len(varD2))
+
+# update function in dictionaries, concatenates two dictionaries
+# avoid using the same key, results may not show, unless the key-value pair repeats.
+varD3 = {6:"Ksha"}
+varD2 = {1:"Steve",2:"Homer",3:"Wozniacki",4:"Satya",5:"Nadella"}
+varD2.update(varD3)
+print varD2
+
+# tuples - They are immutable objects. Can be used to store "Game high Score" or User "cordinate locations"
+# Tuples - They are indexed
+varT = ("Ksha",100,"Steve",95,"Homer",92) # Defining a tuple, always in round brackets
+print varT
+
+varT = ("Woz", 85) # Cannot append values to a tuple, hence immutable. Here the tuple gets overwritten.
+print varT
+
+# indexing tuple
+varT = ("Ksha",100,"Steve",95,"Homer",92)
+print(varT[0:5])
+
+# Deleting an entire tuple
+del varT
+print varT # This will give an error
+
+
+# Module 2 Exercise: Taking user inputs
+varP = input("Enter your fist, last name in the give format")
+print( "Hi! " + varP +  " Welcome onboard")
+
+# Another one, different method
+
+f_name = input ("Enter your first name: ")
+l_name = input ("Enter your last name: ")
+greeting = ("Helo there ! %s %s")
+print(greeting%(f_name,l_name))
+print("Hello There, "+ f_name+" "+ l_name +"!!!")
