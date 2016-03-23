@@ -1,0 +1,12 @@
+# Add the numeric contents of a dictionary
+varD = {"A":4,"B":3,"C":2.5}
+count = 0
+for i in varD:
+    count = count + varD[i]
+print(count)
+
+
+# Important nuances
+
+chr(65)
+age = int(input(" Enter your age in years: "))
