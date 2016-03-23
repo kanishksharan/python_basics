@@ -1,0 +1,27 @@
+# Creating a guessing game: Here the user guesses what computer has generated
+
+import random
+
+varC = random.randint(1,50) # Including 1 and 50
+
+print("Please enter any whole number from 1 - 50")
+
+while True: # "True" is case sensitive
+
+        try:
+            varU = int(input())
+        except:
+            print("You entered a string value")
+
+        if varU == 0:
+            print("You entered an invalid number: ",varU)
+        elif varU > varC:
+            print("Guess Lower")
+        elif varU < varC:
+            print("Guess Higher")
+        else:
+         print("Bingo !",varC," it was")
+         break
+
+
+
