@@ -1,0 +1,31 @@
+def PrimePrinter():
+    try:
+        varS = input("Enter any number to check its Prime or Not")
+        i = 2
+        counter = 0
+        k = int(varS)
+    except:
+        print("You did not enter a legitimate number")
+
+
+    if k == 2:
+        print("Your entered number: ", k, "is a Prime Number")
+    elif k == 0 or k == 1:
+        print("Your entered number: ", k, "is neither Prime nor Composite")
+
+    while (i < k):
+        if k % i == 0:
+            counter += 1
+            break
+        else:
+            i += 1
+
+    if counter == 0:
+        print("Your entered number: ", k, "is a Prime Number")
+    else:
+        print("Your entered number: ", k, "is a Composite Number")
+
+
+
+
+
