@@ -1,0 +1,14 @@
+import sys
+
+varIP = sys.stdin.readline() # The only difference between this and "input" is that in this you can specify no. of characters to enter
+
+varIP_2 = sys.stdin.readline(12)# This will take 12 chars only
+print(varIP,end="")
+print(varIP_2, end="")
+
+varOP = sys.stdout.write("This is same as print statement but this prints the number of chars at the end as well")
+print(varOP)
+
+#Version of your computer
+
+print(sys.version)
