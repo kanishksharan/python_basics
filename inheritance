@@ -1,0 +1,42 @@
+class dad:
+    counter = 7
+    def __init__(self):
+        print("Parent Class initialized")
+    def parentFunc(self):
+        print("A function of the parent class being called")
+    def setCounter(self,k):
+        dad.counter = k
+    def showCounter(self):
+        print(str(dad.counter)) # Referencing a global variable within a function
+
+class ksha(dad):                # Making it the sub class of a parent
+    def __init__(self):
+        print("Child Class being initialized")
+    def childFunc(self):
+        print("A function of the child class being called")
+
+obs = ksha() # This will call the child class' __init__()
+
+# Now using child class to change the "counter" variable's value
+obs.childFunc()
+print(obs.counter) # Original value of the counter variable
+
+obs.parentFunc()
+obs.setCounter(12)
+print(obs.counter) # Value of counter variable being changed from "7" to "12"
+obs.showCounter()
+
+# Method Overriding
+# The method of yhe parent class can be overridden by the method of the child class but the name of the child class should be the same.
+
+class parent:
+    def showFunc(self):
+        print("I am being called from the parent class")
+
+class child(parent):
+    def showFunc(self):
+        print("I am being called from the child class")
+
+p = child()
+p.showFunc()
+
