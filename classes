@@ -1,0 +1,56 @@
+class Students:
+    def __init__(self, name, age, grade): # A function for initialization: Notice that "self" is a keyword here
+        self.name = name
+        self.age = age
+        self.grade = grade
+
+
+clsObject = Students("Kanishk Sharan",25, "A+")
+
+print(clsObject.name)
+print(clsObject.age)
+print(clsObject.grade)
+#print(clsObject.self)
+
+class Students1:
+    def __init__(ksha, name, age, grade): # A function for initialization: Notice that "ksha" is a keyword here: Any word can be keyword here
+        ksha.name = name
+        ksha.age = age
+        ksha.grade = grade
+
+clsObject11 = Students1("Ksha",25, "A+")
+
+print(clsObject11.name)
+print(clsObject11.age)
+print(clsObject11.grade)
+
+# Calling a function from the class
+class Students2:
+    def __init__(self,name, age):
+        self.name = name
+        self.age = age
+
+    def Display(self): # This function must refer to "self"
+        return ("The name of the student is: " + self.name + " and age is " + str(self.age) + " years old")
+
+s3 = Students2("Kanishk Sharan",25 )
+print(s3.Display())
+
+# Attribute functions: hasattr(), setattr(), delattr(), getattr()
+print(hasattr(s3,"grade")) # Returns True of False
+print(hasattr(s3,"name"))
+
+setattr(s3,"grade","A-") # Adds a new attribute to the existing instance of the class
+print(hasattr(s3,"grade")) # Now the o/p will be "True"
+
+print(getattr(s3,"name")) # This is exactly same as " print(s3.name)
+delattr(s3,"age") # Now the attribute "AGE" will be deleted
+print(hasattr(s3,"age")) # This will result in False
+
+
+
+
+
+
+
+
