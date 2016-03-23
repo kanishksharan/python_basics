@@ -1,0 +1,17 @@
+# Random number between a given range of number
+
+import random
+
+print(random.randint(0,3)) # Give a starting and ending range (0 and 3 included)
+
+
+# Generating random item from the list
+# Shuffling the order of the list
+
+import random
+
+varL = ["Kanishk","Sharan","Saurabh","Pintoo"]
+print(random.choice(varL)) # random.choice is the that function
+
+print(random.shuffle(varL)) # Shuffling the order of the list
+print(varL) # The shuffled order of the list will be printed now
