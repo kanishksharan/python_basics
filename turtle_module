@@ -1,0 +1,13 @@
+# This module is used to draw figures
+
+import turtle
+
+# get a pen to draw: Pen() capital "P"
+t = turtle.Pen()
+t.forward(50)
+t.left(90)
+t.forward(50)
+t.left(90)
+t.forward(50)
+t.left(90)
+t.forward(50)
