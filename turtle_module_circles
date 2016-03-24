@@ -1,0 +1,5 @@
+for i in range(0,24):
+    t.circle(50)
+    t.up()
+    t.right(15)
+    t.down()
