@@ -1,0 +1,30 @@
+import turtle
+
+t = turtle.Pen()
+# Creating a square
+t.forward(50)
+t.left(90)
+t.forward(50)
+t.left(90)
+t.forward(50)
+t.left(90)
+t.forward(50)
+t.reset() # Resetting the cursor (arrow)
+
+# Creating a octagon with for loops
+
+for i in range(0,8):
+    t.forward(100)
+    t.right(45)
+
+# Creating an intricate figure
+
+for i in range(1,38):
+    t.forward(100)
+    t.right(175)
+
+# Another cool figure
+
+for i in range(1,20):
+    t.forward(100)
+    t.right(95)
