@@ -1,0 +1,13 @@
+# format()
+
+a = 123456
+b = 12.3345666
+c = 123432.7665812351
+
+print("{0} {0}".format(a,b)) # O/P = 123456 123456
+print("{0}, {0}, {1}".format(a,b)) # O/P = 123456, 123456, 12.3345666
+print("{1}, {1:.2f}, {1}".format(a,b)) # 12.3345666, 12.33, 12.3345666
+print("{1}, {1:.2f}, {0:,}".format(a,b)) # 12.3345666, 12.33, 123,456
+print("{0:,.3f}".format(c)) # 123,432.767
+print("{0:3}".format(c))# adds 3 extra spaces before the number begins
+
