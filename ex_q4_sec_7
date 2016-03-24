@@ -1,0 +1,8 @@
+class ball():
+    def __init__(self,name):
+        self.name = name
+    def hello(self):
+        print("Hello %s" %self.name)
+
+a = ball("ksha")
+a.hello()
