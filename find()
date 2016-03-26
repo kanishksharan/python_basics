@@ -12,4 +12,13 @@ while j < len(s):
 # Find function ()
 num = s.find('k')
 print(num)
+num = s.find("nishk")
+print(num)
+
+# "in" and "not in"
+
+print("K" in "Kanishk")
+print("k" in "Kanishk")
+print("nishk" not in "kanishk")
+
 
