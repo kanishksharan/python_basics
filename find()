@@ -1,0 +1,9 @@
+s = "kanishk"
+
+for i in s:
+    print(i) # Demonstrate string: one by one in counter
+
+
+# Find function ()
+num = s.find('k')
+print(num)
