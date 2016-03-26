@@ -2,8 +2,14 @@ s = "kanishk"
 
 for i in s:
     print(i) # Demonstrate string: one by one in counter
+# Implementing the above concept with while loop
 
+j = 0
+while j < len(s):
+    print(s[j])
+    j+= 1
 
 # Find function ()
 num = s.find('k')
 print(num)
+
