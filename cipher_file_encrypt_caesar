@@ -1,0 +1,46 @@
+def Caesar_Encryptor():
+    import os
+
+    print(os.chdir("C:\\Users\\kanishk\\Desktop"))
+    file_path = str(input("Enter the file path to be encrpted\n"))# This will store the name of the file
+    file_name = file_path+".txt"
+
+    file1 = open(file_name,"r") # File opened in "read" mode
+    content = file1.read() # This holds the content of file
+
+    #Encryption key
+    e_no = int(input("Enter the encryption key\n"))
+    letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+    encrypted = ''
+
+    open_file = "encrypted_"+file_name
+    file2 = open(open_file,"w")
+    #Start the encryption process
+
+    for i in content:
+        # Get the number of the character from the file
+        if i in letters:
+            num = letters.find(i) # Get the position of the alphabet
+            num = num + e_no
+
+        # handle the wrap-around if num is larger than the length of
+        # LETTERS or less than 0
+            if num >= len(letters):
+                num = num - len(letters)
+            elif num < 0:
+                num = num + len(letters)
+
+            encrypted = encrypted + letters[num]
+
+
+        else:
+            #just add the symbol without encrypting/decrypting
+            encrypted = encrypted + i
+
+    file2.write(encrypted)
+    file1.close()
+    file2.close()
+
+
+
+Caesar_Encryptor()
