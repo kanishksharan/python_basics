@@ -1,0 +1,52 @@
+#------Bitwise OR Operators--------#
+
+a = 25
+b = 63
+print(a, "has a binary value: ", bin(a))
+print(b, "has a binary value: ", bin(b))
+print(a,"|",b," : ",a|b, bin(a|b))
+
+#------Bitwise AND Operators--------#
+
+a = 25
+b = 63
+print(a, "has a binary value: ", bin(a))
+print(b, "has a binary value: ", bin(b))
+print(a,"&",b," : ",a&b, bin(a&b))
+
+#------Bitwise XOR Operators--------#
+
+a = 25
+b = 30
+print(a, "has a binary value: ", bin(a))
+print(b, "has a binary value: ", bin(b))
+print(a,"^",b," : ",a^b, bin(a^b))
+
+#------Bitwise <<>> Operators--------#
+
+a = 25
+b = 30
+print(a, "has a binary value: ", bin(a))
+print(b, "has a binary value: ", bin(b))
+print(a,"<< : ", bin(a<<2))
+print(b,"<< : ", bin(b>>2))
+
+#------Bitwise INVERT(~) Operators--------#
+
+a = 25
+print(a, "has a binary value: ", bin(a))
+print(a,"~ : ", ~a," ", bin(-26), " ", bin(~a))
+
+
+#--------------------------------------------------------------------------------
+str = float(input("Enter any number"))
+print(str)
+
+print("Once while dining, \x21 ")
+print(chr(97))
+
+s = "KANISHK SHARAN"
+print(s[::2])
+print(s[::-2])
+
+print("kanishk sharan"[3:].count("a"))
