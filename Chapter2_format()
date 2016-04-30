@@ -12,3 +12,8 @@ print("{0:,.3f}".format(c)) # 123,432.767
 print("{0:3}".format(c))# adds 3 extra spaces before the number begins
 
 print("My first name is {1} and my last name is {0}".format("Kanishk","Sharan"))
+
+#Special cases of format()
+print("decimal hex chr {0:^40}".format("name"))
+print("------- ----- --- {0:-<40}".format(""))
+print("------- ----- --- {0}".format("-" * 40))
