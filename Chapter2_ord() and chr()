@@ -1,0 +1,16 @@
+#----------chr()-------------------------
+numbers = [97, 98, 99]
+
+for number in numbers:
+    # Convert ASCII-based number to character.
+    letter = chr(number)
+    print(number, "=", letter)
+    
+    
+#--------ord()-------------------
+letters = "ABCabc123"
+
+for letter in letters:
+    # Get number that represents letter in ASCII.
+    number = ord(letter)
+    print(letter, "=", number)
