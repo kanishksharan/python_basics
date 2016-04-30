@@ -1,0 +1,40 @@
+print("kanishk sharan".capitalize())
+n = "kanishk sharan"
+
+print(n.capitalize())
+print(n.title())
+print(n.upper())
+print(n.lower())
+
+m = "   Kanishk Sharan   "
+
+print(len(m.rstrip()))
+print(len(m.lstrip()))
+print(len(m.strip()))
+
+print("Kanishk Sharan"[-1:].strip("a"))
+
+arr = ["Arlington", "Bothell", "Boston", "Seattle", "Rochester"]
+
+#Ends With
+s = "Kanishk Sharan"
+print(s[:7].endswith("ishk"))
+
+#-------Find()---------
+s = "kanishk"
+num = s.find('k')
+print(num)
+num = s.find("nishk")
+print(num)
+
+print("kanishk sharan".index("sharan"))
+
+#-------join()-----------------------
+
+s = ["Kanishk","Sharan"]
+print(" ".join(s))
+print("@@".join(s))
+
+#-------split()------------
+s = "Kanishk Sharan is 26 years old now"
+print(s.split("s")) # removes "s" and splits from left and right of "s"
