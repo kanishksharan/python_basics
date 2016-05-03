@@ -1,0 +1,19 @@
+'''
+The method list() takes Tuple types and converts them to lists.
+This is used to convert a given tuple into list.
+'''
+
+t = ("kanishk", (1,2,3), "Sharan", "UWB")
+l = list(t)
+print(t, ("\n"))
+print(l)
+
+'''
+The method tuple() takes List types and converts them to Tuple.
+This is used to convert a given List into Tuple.
+'''
+l = ['kanishk', (1, 2, 3), 'Sharan', 'UWB']
+t = tuple(l)
+
+print(l,"/n")
+print(t)
