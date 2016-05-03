@@ -4,3 +4,15 @@ Individual Assignments
 
 for x, y in ((1, 1), (2, 4), (3, 9)): # left of binary operator
     print(x,y)
+    
+'''
+Nested Slicing for tuples
+'''
+
+a = ("kanishk","sharan")
+b = ("Greatest","Doer","and", "He","can", "scoresometoo!")
+c = (a,b)
+print(c)
+print(c[0:1])
+print(c[1][0:3])
+print(c[1][5][0:5]) # Any level of nesting is possible
