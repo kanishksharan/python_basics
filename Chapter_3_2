@@ -16,3 +16,12 @@ print(c)
 print(c[0:1])
 print(c[1][0:3])
 print(c[1][5][0:5]) # Any level of nesting is possible
+
+'''
+cool math trick
+'''
+
+import math
+
+for x, y in ((-3, 4), (5, 12), (28, -45)):
+ print(math.hypot(x, y))
