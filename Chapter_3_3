@@ -1,0 +1,27 @@
+'''
+The collections module provides the namedtuple() function. This function is
+used to create custom tuple data types.
+'''
+import collections
+
+Sale = collections.namedtuple("Sale",
+"productid customerid date quantity price")
+
+'''
+The first argument to collections.namedtuple() is the name of the custom tuple
+data type that wewant to be created. The second argument is a string of spaceseparated
+names, one for each item that our custom tuples will take. The first
+argument, and the names in the second argument, must all be valid Python
+identifiers. The function returns a custom class (data type) that can be used
+to create named tuples. So, in this case, we can treat Sale just like any other
+Python class (such as tuple), and create objects of type Sale.
+'''
+
+sales = []
+sales.append(Sale(432, 921, "2008-09-14", 3, 7.99))
+sales.append(Sale(419, 874, "2008-09-15", 1, 18.49))
+
+total = 0
+for sale in sales:
+ total += sale.quantity * sale.price
+ print("Total ${0:.2f}".format(total))
