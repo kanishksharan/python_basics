@@ -38,3 +38,10 @@ print("@@".join(s))
 #-------split()------------
 s = "Kanishk Sharan is 26 years old now"
 print(s.split("s")) # removes "s" and splits from left and right of "s"
+
+# Replace Function
+print("Kanishk Sharan".replace("a","Q",10))
+
+#-------------Partition(0 and rpartititon()--------------
+print("Kanishk Sharan".partition(" "))
+print("Kanishk Sharan".rpartition("a"))
