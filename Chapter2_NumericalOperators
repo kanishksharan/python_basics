@@ -21,3 +21,8 @@ print(i)
 
 for countdown in 5,4,3,2,1,"Hey !!!":
     print(countdown)
+    
+# How to reverse String simply by using slicing
+
+s = "Kanishk Sharan"
+print(s,"\n",s[::-1])
