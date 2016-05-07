@@ -1,0 +1,21 @@
+#-------------Converting Strings to List()----------------------
+str = "KANISHK"
+s = []
+s2 = [i for i in str] # Method 1
+s3 = list(str) # Method 2
+
+for i in str:
+    s.append(i) #method 3
+print(s)
+print(s2)
+print(s3)
+
+#--------Pop()-----------------------------
+s = ["K","A","N","I","S","H","K"]
+print(s.pop(), s) # Removes the last digit by default
+s = ["K","A","N","I","S","H","K"]
+print(s.pop(0), s) # Removes the first digit with '0'
+s = ["K","A","N","I","S","H","K"]
+print(s.pop(2), s) # Removes the 2nd digit (starting from 0) from the left
+s = ["K","A","N","I","S","H","K"]
+print(s.pop(-2),s) # Removes the 2nd last digit from the end
