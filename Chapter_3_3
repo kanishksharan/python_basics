@@ -25,3 +25,13 @@ total = 0
 for sale in sales:
  total += sale.quantity * sale.price
  print("Total ${0:.2f}".format(total))
+ 
+#----------------another Example of namedTuple
+
+import collections
+a = []
+s = collections.namedtuple("Student",["Name","House","Year"])
+
+a.append(s("Kanishk Sharan","Nagarjuna", "2000"))
+a.append(s("Satish Bonde","Vijaynagar", "2005"))
+print(a)
