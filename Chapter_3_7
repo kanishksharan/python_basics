@@ -1,0 +1,33 @@
+#-----add()---------
+s = {"k","a","n","i","s","h","k"}
+print(s.add("z"), s)
+
+#-------copy()-------------
+s = {"k","a","n","i","s","h","k"}
+print(s.copy())
+
+#-------difference()------------
+l = {"s","h","a","r","a","n"}
+s = {"k","a","n","i","s","h","k"}
+print(s.difference(l))
+print(l.difference(s))
+
+#----------difference_update()--------
+l = {"s","h","a","r","a","n"}
+s = {"k","a","n","i","s","h","k"}
+print(l.difference_update(s), l)
+
+#-----------discard()-------------
+l = {"s","h","a","r","a","n"}
+s = {"k","a","n","i","s","h","k"}
+print(l.discard("h"),l)
+
+#-----------remove()------------
+l = {"s","h","a","r","a","n"}
+s = {"k","a","n","i","s","h","k"}
+print(s.remove("k"),s)
+
+#------------intersection()---------
+l = {"s","h","a","r","a","n"}
+s = {"k","a","n","i","s","h","k"}
+print(l.intersection(s))
