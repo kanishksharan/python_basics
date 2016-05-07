@@ -20,6 +20,15 @@ Index of the list() element
 '''
 print(a.index(1,0,len(a)))
 
+
+'''
+Another way of appending in a list()
+'''
+for i in range(len(numbers)):
+numbers[i] += 1
+
+
+
 '''
 deleting string items using slicing
 '''
