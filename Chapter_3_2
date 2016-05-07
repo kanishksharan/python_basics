@@ -5,6 +5,10 @@ Sequence unpacking
 for x, y in ((1, 1), (2, 4), (3, 9)): # left of binary operator
     print(x,y)
     
+#-----sequence unpacking using *var-------------------
+first, *rest = [9, 2, -4, 8, 7] #The result of *rest is always a list()
+#The result of the entire expression (fist and *rest) is a tuple()
+    
 '''
 Nested Slicing for tuples
 '''
