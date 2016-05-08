@@ -1,0 +1,59 @@
+#--------dict() creates a dictionary---------
+d = dict()
+print(d)
+
+#---------fromkeys(s,v)---------------------
+d = {1:"Red",2:"Green",3:"Yellow",4:"Blue"}
+d2 = dict.fromkeys(d)
+print(d2)
+#Second variation of fromkeys()
+d = "Red Green Yellow Blue"
+s = "Kanishk Sharan Loves Shady Stuffs"
+d2 = dict.fromkeys(s.split(" "))
+print(d2)
+d2 = dict.fromkeys(s.split(" "),12)
+print(d2)
+
+#------------------copy()---------------
+d = {1:"Red",2:"Green",3:"Yellow",4:"Blue"}
+d2 = d.copy()
+print(d2)
+
+#------------------get(k)-----------------
+d = {1:"Red",2:"Green",3:"Yellow",4:"Blue"}
+print(d.get(3))
+
+#---------------get(k,v)------------------
+d = {1:"Red",2:"Green",3:"Yellow",4:"Blue"}
+print(d.get(5,"Orange"))
+print(d.get(7,"Mauve"))
+
+#---------------items()--------------------
+d = {1:"Red",2:"Green",3:"Yellow",4:"Blue"}
+print(d.items())
+
+#---------------keys()----------------------
+d = {1:"Red",2:"Green",3:"Yellow",4:"Blue"}
+print(d.keys())
+
+#----------------values()-------------------
+d = {1:"Red",2:"Green",3:"Yellow",4:"Blue"}
+print(d.values())
+
+#----------------pop(k) and pop(k,v)-----------
+d = {1:"Red",2:"Green",3:"Yellow",4:"Blue"}
+print(d.pop(3),d)
+print(d.pop(6,"orange"))
+
+#------------------popitem()---------------------
+d = {1:"Red",2:"Green",3:"Yellow",4:"Blue"}
+print(d.popitem())
+
+#--------------setdefault()-----------------------
+d = {1:"Red",2:"Green",3:"Yellow",4:"Blue"}
+print(d.setdefault(7,"Orange"),"\n",d)
+
+#-------------update()-----------------------------
+d = {1:"Red",2:"Green",3:"Yellow",4:"Blue"}
+d2 = {7:"Orange",9:"Maroon",1:"Black"}
+print(d.update(d2),"\n",d)
