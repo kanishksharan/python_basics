@@ -31,3 +31,43 @@ print(s.remove("k"),s)
 l = {"s","h","a","r","a","n"}
 s = {"k","a","n","i","s","h","k"}
 print(l.intersection(s))
+
+#-----------------isdisjoint()----------------
+l = {"s","h","a","r","a","n"}
+s = {"k","a","n","i","s","h","k"}
+print(s.isdisjoint(l))
+
+#------------------issubset()--------------
+l = {"s","h","a","r","a","n"}
+s = {"k","a","n","i","s","h","k"}
+print(l.issubset(s))
+
+#----------issuperset()--------------------
+l = {"s","h","a","r","a","n"}
+s = {"k","a","n","i","s","h","k"}
+print(s.issuperset(l))
+
+#-------------pop()------------------------
+l = {"s","h","a","r","a","n"}
+s = {"k","a","n","i","s","h","k"}
+print(l.pop())
+
+#-------symmetric_difference()----------------
+l = {"s","h","a","r","a","n"}
+s = {"k","a","n","i","s","h","k"}
+print(s.symmetric_difference(l))
+
+#-------symmetric_difference_update()------------
+l = {"s","h","a","r","a","n"}
+s = {"k","a","n","i","s","h","k"}
+print(s.symmetric_difference_update(l), s)
+
+#----------union()----------------------------
+l = {"s","h","a","r","a","n"}
+s = {"k","a","n","i","s","h","k"}
+print(l.union(s))
+
+#-----------update()------------------------
+l = {"s","h","a","r","a","n"}
+s = {"k","a","n","i","s","h","k"}
+print(l.update(s), l)
