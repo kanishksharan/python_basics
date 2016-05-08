@@ -1,3 +1,8 @@
+#----------------mapping unpacking (**var)-----------
+d = {"Red":1,"Green":2,"Yellow":3,"Blue":4}
+print("{Red} {Green} {Yellow}".format(**d)) # using format()
+
+
 #--------dict() creates a dictionary---------
 d = dict()
 print(d)
