@@ -1,3 +1,7 @@
+#-------Set comprehension-----------
+s = {x for x in range(0,52,2)}
+print(s)
+
 #-----add()---------
 s = {"k","a","n","i","s","h","k"}
 print(s.add("z"), s)
