@@ -1,0 +1,13 @@
+#While Loop
+
+while boolean_expression:
+  while_suite
+else:             #Else is optional
+  else_suite
+  
+# For Loop
+
+for expression in iterable:
+  for_suite
+else:           #Else is optional
+  else_suite
