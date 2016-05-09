@@ -1,0 +1,18 @@
+try:
+ try_suite
+except exception_group1 as variable1:
+ except_suite1
+…
+except exception_groupN as variableN:
+ except_suiteN
+else:
+ else_suite
+finally:
+ finally_suite
+
+'''
+There must be at least one except block, but both the else and the finally
+blocks are optional. The else block’s suite is executed when the try block’s suite
+has finished normally—but it is not executed if an exception occurs. If there
+is a finally block, it is always executed at the end.
+'''
