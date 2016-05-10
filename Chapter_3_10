@@ -1,0 +1,7 @@
+#-----dictionary comprehension------------------------
+word = 'KANISHK'
+d = {i:word.count(i) for i in word}
+print(d)
+
+o/p 
+{'I': 1, 'N': 1, 'K': 2, 'S': 1, 'H': 1, 'A': 1}
