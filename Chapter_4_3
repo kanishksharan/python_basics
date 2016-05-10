@@ -1,0 +1,106 @@
+#---------Positional Arguments-----------
+def menu(wine,entree,dessert):
+    return {"wine": wine,"entree":entree,"dessert":dessert}
+
+print(menu('chardonnay', 'chicken', 'cake'))
+'''
+Although very common, a downside of positional arguments is that you need to remember
+the meaning of each position.
+'''
+#--------------Keyword Arguments------------------------
+'''
+To avoid positional argument confusion, you can specify arguments by the names of
+their corresponding parameters, even in a different order from their definition in the
+function:
+'''
+print(menu(entree='beef', dessert='bagel', wine='bordeaux'))
+
+#----------Specify Default parameters------------------------
+def menu(wine,entree,dessert='chamcham'):
+    return {"wine": wine,"entree":entree,"dessert":dessert}
+print(menu("chardonnay","biryani"))
+
+#-----------List as an argument--------------------------
+def acc(e,l=[]):
+    l.append(e)
+    return l
+print(acc("Kanishk"))
+
+#-----Positional Arguments with "*" turn argument items into a tuple()-----------
+def pos_args(item1, item2,*rest):
+    print("I need my essential: ",item1)
+    print("I need my daily items: ", item2)
+    print("And I need all of these as well: ",rest)
+
+pos_args('cap', 'gloves', 'scarf', 'monocle', 'mustache wax')
+
+#---------Positional Arguments with "**" turn the arguments into a dictionary{}----------
+def print_kwargs(**kwargs):
+    print('Keyword arguments:', kwargs)
+print_kwargs(wine='merlot', entree='mutton', dessert='macaroon')
+
+#------------Docstrings-----------------------------------------------------------
+'''Readability counts, says the Zen of Python. You can attach documentation to a function
+definition by including a string at the beginning of the function body. This is the function’s
+docstring:
+'''
+
+def print_if_true(thing, check):
+    '''
+    Prints the first argument if a second argument is true.
+    The operation is:
+    1. Check whether the *second* argument is true.
+    92 | Chapter 4: Py Crust: Code Structures
+    2. If it is, print the *first* argument.
+    '''
+    if check:
+        print(thing)
+
+#---------------help() docstring---------------------
+'''
+To print a function’s docstring, call the Python help() function. Pass the function’s name
+to get a listing of arguments along with the nicely formatted docstring:
+'''
+print(help(sorted))
+
+#------------Nested Functions--------------------------
+def outer (a,b):
+    def inner(c,d):
+        print(c+d)
+    return inner(a,b)
+
+outer(5,4)
+
+#-------------Second Example----------------
+def knights(saying):
+    def inner(quote):
+        print("We are the knights who say: %s" % quote)
+    return inner(saying)
+
+knights("Kesha")
+
+#---------------Closure Functions-----------------
+'''
+This is a function that is dynamically generated
+by another function and can both change and remember the values of variables that
+were created outside the function.
+'''
+'''
+The following example builds on the previous knights() example. Let’s call the new
+one knights2(), because we have no imagination, and turn the inner() function into
+a closure called inner2(). Here are the differences:
+• inner2() uses the outer saying parameter directly instead of getting it as an argument.
+• knights2() returns the inner2 function name instead of calling it.
+'''
+def knights2(saying):
+    def inner2():
+      print("We are the knights who say: %s" % saying)
+    return inner2
+
+knights2("Kesha again")
+
+'''The inner2() function knows the value of saying that was passed in and remembers
+it. The line return inner2 returns this specialized copy of the inner2 function (but
+doesn’t call it). That’s a closure: a dynamically created function that remembers where
+it came from.
+'''
