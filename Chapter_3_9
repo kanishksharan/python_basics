@@ -1,0 +1,32 @@
+#------Working with dictionaries--------------
+d = {'room': 'ballroom', 'weapon': 'lead pipe','person': 'Col. Mustard'}
+for i in d:
+    print(i) # This will print the "Keys" only
+
+for j in d.values():
+    print(j) # This will print the values only
+
+for k in d.items():
+    print(k) # This will print both "Key: value" pairs
+
+#------------------zip()-----------------------------------------
+days = ['Monday', 'Tuesday', 'Wednesday']
+fruits = ['banana', 'orange', 'peach']
+drinks = ['coffee', 'tea', 'beer']
+desserts = ['tiramisu', 'ice cream', 'pie', 'pudding']
+
+for a,b,c,d in zip(days,fruits,drinks,desserts):
+    print("days-Fruits-Drinks-Desserts",a,"-",b,"-",c,"-",d)
+
+'''
+zip() stops when the shortest sequence is done. One of the lists (desserts) was longer
+than the others, so no one gets any pudding unless we extend the other lists.
+'''
+#Using zip() to create lists and dictionaries
+
+english = 'Monday', 'Tuesday', 'Wednesday'
+french = 'Lundi', 'Mardi', 'Mercredi'
+l = list( zip(english, french) )
+d = dict( zip(english, french) )
+
+print(l,"\n",d)
