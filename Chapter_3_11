@@ -1,0 +1,18 @@
+#------None keyword--------------
+'''
+None is a special Python value that holds a place when there is nothing to say. It is not
+the same as the boolean value False, although it looks false when evaluated as a boolean.
+Here’s an example:
+'''
+
+def is_none(thing):
+    if thing is None:
+        print("It's None")
+    elif thing:
+        print("It's True")
+    else:
+        print("It's False")
+
+is_none("")
+is_none("kanishk")
+is_none(None)
