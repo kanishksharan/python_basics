@@ -2,3 +2,12 @@
 
 leaps = [y for y in range(1900, 1940) if y % 4 == 0]
 print(leaps)
+
+#---------List Comprehensions-----------
+cols = range(1,5)
+rows = range(1,5)
+
+l = [(r,c) for r in rows for c in cols]
+print(l)
+for i in l:
+    print(i)
