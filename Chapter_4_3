@@ -104,3 +104,11 @@ it. The line return inner2 returns this specialized copy of the inner2 function 
 doesn’t call it). That’s a closure: a dynamically created function that remembers where
 it came from.
 '''
+#---------------Creating a new list with every function call----------------
+def nonbuggy(arg, result=None):
+    if result is None:
+        result = []
+        result.append(arg)
+        print(result)
+        
+nonbuggy(12) 
