@@ -112,3 +112,16 @@ def nonbuggy(arg, result=None):
         print(result)
         
 nonbuggy(12) 
+
+
+#-----------------Lambda Function---------------------
+'''
+It's a fuction without a name : Anonymous
+
+y = lambda x: x**2 # y only contains the function whereas, lambda is the actual anonymous function
+type(y)
+advantages of lambda:
+1. You can return a function from within a function
+'''
+lamb = lambda x,y: pow(x,y)
+print(lamb(2,8))
