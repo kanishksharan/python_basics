@@ -125,3 +125,8 @@ advantages of lambda:
 '''
 lamb = lambda x,y: pow(x,y)
 print(lamb(2,8))
+
+#-----------lambda ftn to remove duplicates------------------
+rmv = lambda iterable: set(iterable) # Set contains unique elements only
+print(rmv("KANISHK"))
+print(rmv(["K","A","N","I","S","H","K"]))
