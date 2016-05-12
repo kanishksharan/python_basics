@@ -1,0 +1,34 @@
+#--------------Using a Generator (In python 3, xrange has been renamed to range)-------------------------------------
+import time
+
+start_T = time.time()
+gen = range(100,1000,3)
+print(gen[99], "The time it took the generate this number was :",time.time()-start_T)
+
+print(len(range(10))) #Try this statement, it is really important
+
+#--------------Using a non-Generator (In function form)--------------
+
+import time
+
+start_t = time.time()
+def ap (n):
+    counter1 = len(range(n))
+    counter2 = 0
+    x = 0
+    while x < counter1:
+        counter2 += x
+        x+= 1
+    print(counter2,"The time it took the generate this number was :",time.time()-start_T )
+
+ap(10)
+
+#--------------Using a Generator (In function form)--------------
+def ap(n):
+    counter1 = 0
+    while counter1 < n:
+        yield counter1
+        counter1 += 1
+        
+print(sum(ap(10)))
+
