@@ -1,0 +1,48 @@
+'''
+1> Always first allow the error/exception to occur
+2> Note the exception being thrown
+3> use that exception name in your except block
+'''
+
+def ex1(n):
+    arr = [x for x in range(0,11,2)]
+    try:
+        position = arr.index(n)
+        div = 49/n
+    except ValueError:
+        print("%d is not in the list"%(n))
+    except ZeroDivisionError:
+        print("You're dividing the number by zero !!!")
+    return "The position of %d in %s: "%(n,arr)
+
+
+ex1(12)
+
+'''
+Second variation: Giving out python's default error Message
+'''
+def ex2(n):
+    arr = [x for x in range(0,11,2)]
+    try:
+        if n % 2 == 0:
+            raise Exception     #Defining custom exception
+        position = arr.index(n)
+        div = 49/n
+    except ValueError as e: # using "as e" fro error definitions
+        print(e)
+    except ZeroDivisionError as e:
+        print(e)
+    except Exception as EvenError: #trapping Custom exceptions
+        print("Do not pass pass even values in the argument: %d"%(n))
+    return "The position of %d in %s: "%(n,arr)
+
+ex2(12)
+
+# Always put the general exceptions at the very end
+'''
+1> The "else" block in the try/except block used to place the codes that would run
+if no exceptions are raised. However, you could very well place the same code in the try
+block itself.
+2> The "finally" block always executes, irrespective of the fact whether an exception has been raised or not.
+3> Actual source of my knowledge "https://www.youtube.com/watch?v=NIWwJbo-9_8"
+'''
