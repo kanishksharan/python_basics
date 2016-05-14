@@ -1,0 +1,47 @@
+# Now defining a decorator to raise an error whenever 0 is passed as an argument
+
+def deco_1(func):
+    def inner(*args,**kwargs):
+        try:
+            return func(*args,**kwargs)
+        except Exception as x:
+            print("You provided 0 as your argument")
+            return x
+    return inner
+
+# Define a simple function
+
+def f_c(f):
+    celsius = (f-32) * (5/f)
+    return celsius
+
+
+caller = deco_1(f_c)
+print(caller(0))
+
+#--------Method 2 of using Decorators using "@<deco_name>
+
+def deco_1(func):
+    def inner(*args,**kwargs):
+        try:
+            return func(*args,**kwargs)
+        except Exception as x:
+            print("You provided 0 as your argument")
+            return x
+    return inner
+
+# Define a simple function
+@deco_1 #Calling a decorator in a neater manner
+def f_c(f):
+    celsius = (f-32) * (5/f)
+    return celsius
+
+print(f_c(0))
+
+'''
+1> As an alternative to the manual decorator assignment above, just add @decorator_name
+before the function that you want to decorate
+2> You can have more than one decorator for a function.
+3> The decorator that’s used closest to the function (just above the def) runs first and then
+the one above it. Either order gives the same end result
+'''
