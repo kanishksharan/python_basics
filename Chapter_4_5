@@ -1,0 +1,19 @@
+'''
+Writing a function to convert fahrenheit to Celsius
+'''
+
+def f_to_c(fah):
+    celsius = (fah-32) * (5/9)
+    return celsius
+
+#print(f_to_c(97.4))
+
+'''
+Writing a function to convert fahrenheit to kelvin
+'''
+def f_to_k(fah):
+    celsius = f_to_c(fah)
+    kelvin = (celsius + 273.15)
+    return "%f Fahreheit when converted to Kelvin: %f"%(fah,kelvin)
+
+print(f_to_k(98.6))
