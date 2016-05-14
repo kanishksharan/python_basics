@@ -46,3 +46,12 @@ block itself.
 2> The "finally" block always executes, irrespective of the fact whether an exception has been raised or not.
 3> Actual source of my knowledge "https://www.youtube.com/watch?v=NIWwJbo-9_8"
 '''
+# Defining a class for a custom exception
+
+class UppercaseException(Exception):
+    pass
+# using the custom defined exception in our actual code
+words = ['eeenie', 'meenie', 'miny', 'MO']
+for word in words:
+    if word.isupper():
+        raise UppercaseException(word)
