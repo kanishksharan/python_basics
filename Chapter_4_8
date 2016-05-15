@@ -1,0 +1,17 @@
+'''
+Names that begin and end with two underscores (__) are reserved for use within Python,
+so you should not use them with your own variables
+'''
+
+'''
+For instance, the name of a function is in the system variable function .__name__, and
+its documentation string is function .__doc__:
+'''
+def amazing():
+    '''This is the amazing function.
+    Want to see it again?'''
+    print('This function is named:', amazing.__name__)
+    print('And its docstring is:', amazing.__doc__)
+
+
+print(amazing())
