@@ -1,0 +1,9 @@
+# Enumerate
+
+def enum():
+    arr = [x for x in range(0,22,2)]
+    for counter, value in enumerate(arr):
+        print(arr)
+        print(counter, value)
+        
+# follow more on this link: http://book.pythontips.com/en/latest/enumerate.html
