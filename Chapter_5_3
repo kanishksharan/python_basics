@@ -1,0 +1,17 @@
+'''
+Module Search Path
+
+Where does Python look for files to import? It uses a list of directory names and ZIP
+archive files stored in the standard sys module as the variable path. You can access and
+modify this list.
+'''
+
+import sys
+for place in sys.path:
+  print(place)
+  
+'''
+  That initial blank output line is the empty string '', which stands for the current directory.
+If '' is first in sys.path, Python looks in the current directory first when you
+try to import something
+'''
