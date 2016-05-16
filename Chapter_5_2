@@ -1,0 +1,11 @@
+# Import a module with a different name
+
+import report as wr
+description = wr.get_description()
+print("Today's weather:", description)
+
+# Import only what you want from the module
+
+from report import get_description
+description = get_description()
+print("Today's weather:", description)
