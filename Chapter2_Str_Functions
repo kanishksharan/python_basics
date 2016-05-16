@@ -42,6 +42,6 @@ print(s.split("s")) # removes "s" and splits from left and right of "s"
 # Replace Function
 print("Kanishk Sharan".replace("a","Q",10))
 
-#-------------Partition(0 and rpartititon()--------------
+#-------------Partition() and rpartititon()--------------
 print("Kanishk Sharan".partition(" "))
 print("Kanishk Sharan".rpartition("a"))
