@@ -7,3 +7,16 @@ def enum():
         print(counter, value)
         
 # follow more on this link: http://book.pythontips.com/en/latest/enumerate.html
+
+# An easier example for enumerations
+def enum2():        
+    my_list = ['apple', 'banana', 'grapes', 'pear']
+    for c, value in enumerate(my_list, 1): # try and changing this to "1" from "0"
+        print(c, value)
+
+# Another similar example for enumerate
+
+def enum3():
+    my_list = ['apple', 'banana', 'grapes', 'pear']
+    counter_list = list(enumerate(my_list, 1))
+    print(counter_list)
