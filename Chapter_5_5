@@ -1,0 +1,38 @@
+#Setdefault() for dictionaries
+
+word = 'KANISHK'
+d = {i:word.count(i) for i in word}
+print(d)
+print(d.get('A'))
+print(d['K'])
+
+d.setdefault('Z')
+'''
+If we try to assign a different default value to an existing key, the original value is returned
+and nothing is changed
+'''
+d.setdefault("K",4)
+print(d)
+
+'''
+defaultdict() is similar, but specifies the default value for any new key up front, when
+the dictionary is created. Its argument is a function. In this example, we pass the function
+int, which will be called as int() and return the integer 0
+'''
+
+from collections import defaultdict
+
+word = 'KANISHK'
+d = {i:word.count(i) for i in word}
+print(d)
+print(d.get("A"))
+d = defaultdict(int) # New dictionary being created, the previous "d" is now overwritten
+d["K"] = 2
+print(d['K'])
+print(d["A"])
+print(d)
+
+print(d.get("A"))
+'''
+Now, any missing value will be an integer (int), with the value 0:
+'''
